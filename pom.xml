@@ -65,6 +65,7 @@
             </plugin>
         </plugins>
   
+  <finalName>spring-boot-example-docker</finalName>
 		
 	</build>
 
