@@ -5,16 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.client.RestTemplate;
 
+import com.app.spring.boot.jenkins.springbootexample.controller.SpringController;
+
 @SpringBootTest
 class SpringBootExampleApplicationTests {
 
 	@Test
-	public void testGetDetails() {
-		
-		
-		String url = "http://localhost:8081/details" ;
-		RestTemplate rst = new RestTemplate();
-		String str = rst.getForObject(url, String.class);
+	public void testGetStringConstant() {
+		SpringController obj  = new SpringController();
+		String str = obj.getStringConstant();
 		assertNotNull(str);
 	}
 

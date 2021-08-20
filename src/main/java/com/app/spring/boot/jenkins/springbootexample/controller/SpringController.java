@@ -7,9 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class SpringController {
 
 	
-	@GetMapping("/details")
+	@GetMapping
 	public String getDetails() {
 		return "Welcome To spring boot integration to Jenkins !!" ;
 	}
+	
+	
+	public String getStringConstant() {
+		return "Welcome To spring boot integration to Jenkins - string constant !!" ;
+	}
+	
 	
 }
