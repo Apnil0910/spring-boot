@@ -7,7 +7,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login-password --region us-east-2)
-      - REPOSITORY_URI=022932606714.dkr.ecr.us-east-2.amazonaws.com/spring-boot-example-private-registry
+      - REPOSITORY_URI=public.ecr.aws/m0h9j0f1/spring-boot-example
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
