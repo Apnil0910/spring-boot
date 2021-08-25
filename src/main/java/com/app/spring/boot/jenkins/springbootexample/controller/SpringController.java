@@ -8,10 +8,14 @@ public class SpringController {
 
 	
 	@GetMapping
-	public String getDetails() {
+	public String getDetails1() {
 		return "Welcome To spring boot integration to Jenkins !!" ;
 	}
 	
+	@GetMapping("/welcome")
+	public String getDetails2() {
+		return "Welcome To spring boot integration with AWS - CLOUD !!" ;
+	}
 	
 	public String getStringConstant() {
 		return "Welcome To spring boot integration to Jenkins - string constant !!" ;
