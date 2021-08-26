@@ -6,11 +6,11 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - aws ecr get-login-password --region us-east-2 | docker login -u AWS --password-stdin 022932606714.dkr.ecr.us-east-2.amazonaws.com
-  
-   build:
+      - echo logged in succedd ...
+  build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...         
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG   
-      - echo image created for repo aws spring boot example
+      - echo image created for repo aws spring boot example ... 
